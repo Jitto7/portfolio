@@ -28,3 +28,19 @@ const observer2 = new IntersectionObserver((entries) => {
 
 skillsItems.forEach(el => observer2.observe(el));
 
+// Navbar mobile menu to close automatically
+document.addEventListener("DOMContentLoaded", function () {
+    const navbarCollapse = document.getElementById("navbarNav");
+    const navLinks = document.querySelectorAll("#navbarNav .nav-link");
+
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            // Only close it if the menu is currently open (mobile view)
+            if (navbarCollapse.classList.contains("show")) {
+                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+                bsCollapse.hide();
+            }
+        });
+    });
+});
+

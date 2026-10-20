@@ -1,14 +1,23 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: black;
     margin: 0;
     font-family: system-ui, -apple-system, sans-serif;
 }
+section {
+    scroll-margin-top: 10px;
+}
 
 /* ============================= */
 /* NAVBAR */
 /* ============================= */
-
-.navbar {
+#navbar {
     padding: 12px 5%;
     background: #050505 !important;
     border-bottom: 1px solid rgba(0, 173, 181, 0.25);
@@ -16,7 +25,6 @@ body{
 }
 
 /* Logo Brand */
-
 .navbar-brand {
     color: #00adb5 !important;
     font-size: 25px;
@@ -24,19 +32,15 @@ body{
     letter-spacing: 1px;
     transition: 0.3s ease;
 }
-
 .navbar-brand:hover {
     color: white !important;
     transform: scale(1.05);
 }
 
-
 /* Navbar Links */
-
 .navbar-nav {
     gap: 8px;
 }
-
 .navbar-nav .nav-link {
     position: relative;
     color: white;
@@ -141,8 +145,8 @@ body{
 
 .my-name {
     color: rgb(255, 255, 255);
-    font-size: clamp(40px, 8vw, 60px);/*responsive typography rule (min size, preferred size, max size)*/
-    margin: 0 0 15px 0; /*Top Right Bottom Left*/
+    font-size: clamp(40px, 8vw, 60px);
+    margin: 0 0 15px 0;
     line-height: 1.1;
 }
 
@@ -150,7 +154,7 @@ body{
     color: #a7a7a8;
     font-size: large;
     line-height: 1.6;
-    margin: 0 0 30px 0; /*Top Right Bottom Left*/
+    margin: 0 0 30px 0;
     max-width: 600px;
 }
 
@@ -184,7 +188,7 @@ body{
 
     .homeportion {
         min-height: auto;
-        padding: 90px 0; /*TopBottom and LeftRight*/
+        padding: 90px 0;
     }
 
     .container-one {
@@ -225,7 +229,7 @@ body{
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    padding: 100px 0; /*TopBottom LeftRight*/
+    padding: 100px 0;
 }
 
 .container-two {
@@ -246,7 +250,7 @@ body{
 .ap-one h1 {
     color: #f7fafb;
     font-size: clamp(32px, 4vw, 48px);
-    margin: 0 0 20px 0; /*Bottom*/
+    margin: 0 0 20px 0;
     letter-spacing: -2px;
 }
 
@@ -255,14 +259,14 @@ body{
     font-size: 18px;
     line-height: 1.7;
     max-width: 620px;
-    margin: 0 0 30px 0;/*Bottom*/
+    margin: 0 0 30px 0;
 }
 
 /* Details */
 .details {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /*Create 2 columns and each column has a minimum size of 0 and maximum size of 1fr (fractional unit) */
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
     gap: 15px;
 }
 
@@ -273,8 +277,8 @@ body{
     background-color: #1a1a1a;
     color: #ddddee;
     border-radius: 5px;
-    padding: 12px 15px;/*TopBottom RightLeft*/
-    box-shadow: -3px 0 0 #0dcaf0; /*Creates left side shadows in the details boxes*/
+    padding: 12px 15px;
+    box-shadow: -3px 0 0 #0dcaf0;
     font-weight: bold;
     box-sizing: border-box;
 }
@@ -289,7 +293,7 @@ body{
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: centeR;
+    align-items: center;
     gap: 30px;
     min-width: 0;
 }
@@ -360,8 +364,7 @@ body{
         font-size: small;
     }
     .ele-one span, .ele-two span{
-        font-size: small;
-        
+        font-size: small;   
     }
     .ap-image img {
         max-width: 300px;
@@ -370,8 +373,6 @@ body{
     .p-btns {
         width: 65px;
     }
-
-  
 }
 
 /* Mobile Size */
@@ -379,7 +380,7 @@ body{
 
     .aboutportion {
         min-height: auto;
-        padding: 80px 0; /*Top and Bottom*/
+        padding: 80px 0;
     }
 
     .container-two {
@@ -410,11 +411,9 @@ body{
         grid-template-columns:repeat(2,minmax(0,1fr));
         gap:22px;
         max-width: 100%;
-        /* padding:10px; */
     }
 
-    .ele-one,
-    .ele-two {
+    .ele-one,.ele-two {
         margin: 0;
         text-align: start;
     }
@@ -476,7 +475,7 @@ body{
 ========================================= */
 .skills-section {
     min-height: 100vh;
-    padding: 80px 0 ; /* TopBottom*/   
+    padding: 80px 0 ;  
     color: #ffffff;
     overflow: hidden;
 }
@@ -553,11 +552,10 @@ body{
 }
 
 .icon-box i {
-    -webkit-text-stroke: .5px;/*Makes icons visually thicker  */
+    -webkit-text-stroke: .5px;
     font-size : 22px;
     color: #111;
 }
-
 
 /* SKILL TAGS */
 .skill-tags {
@@ -570,16 +568,12 @@ body{
     display: flex;
     align-items: center;
     gap: 9px;
-
     padding: 10px 14px;
-
     background-color: #000000;
     border-radius: 7px;
-
     color: #fcfdfd;
     font-size: 14px;
     font-weight: 500;
-
     transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
@@ -698,7 +692,6 @@ body{
 /* MOBILE */
 @media (max-width: 700px) {
 
-
 .skills-section {
     padding: 60px 0;
 }
@@ -777,7 +770,6 @@ body{
 
 /* SMALL MOBILE */
 @media (max-width: 400px) {
-
 
 .skills-container {
     width: 92%;
@@ -911,6 +903,14 @@ body{
 }
 
 /* TABLET */
+@media (max-width:1000px){
+
+    .projectsection {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+}
+
 @media (max-width: 900px) {
 
     .projectsportion {
@@ -1281,12 +1281,9 @@ body{
     width: 50px;
     height: 50px;
     min-width: 50px;
-
     border-radius: 10px;
-
     background: rgba(0, 173, 181, 0.12);
     border: 1px solid #00adb5;
-
     display: flex;
     justify-content: center;
     align-items: center;
